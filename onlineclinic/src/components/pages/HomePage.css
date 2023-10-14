@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+/* font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif; */
+.container3  .card-group {
+    border:'1px solid red';
+    border-radius: 12px;
+}
+
+.container3 .card{
+    margin: 3%; 
+    height: 270px;
+    /* width: 84%; */
+   align-items: center;
+   justify-content: center;
+   border-radius: 12px;
+   border: 1px solid rgb(179, 174, 174);
+   box-shadow: 0px 4px 12px gray;
+}
+.container3 .card .img{
+    
+    background-color: rgb(75, 152, 224);
+    width: 100%;
+}
+.container3 .card p{
+    color:  gray;
+   font-size: 120%;
+}
+
+.container3 .card-body{
+    background-color: white;
+}
