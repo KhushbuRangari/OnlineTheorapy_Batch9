@@ -1,0 +1,17 @@
+.body{
+    box-sizing: border-box;
+    display: grid;
+}
+
+.carousel-container{
+    height:30%;
+    margin:1%;
+}
+
+.carousel-container img{
+    height:350px;
+}
+
+.width70{
+    width:70%;
+}
