@@ -8,9 +8,9 @@ const Medicines = () => {
   return (
     <div>
       <section> 
-        <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <form className="d-flex m-5 col-8 justify-content-center" role="search">
+        <input className="form-control me-2 " type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-info" type="submit">Search</button>
       </form></section>
       <Carousel />
       <MedicineProducts />
