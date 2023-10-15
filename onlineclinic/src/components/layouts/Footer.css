@@ -1,0 +1,28 @@
+/* .container .row1{
+    background-color: #28328c;
+     font-size: 12 
+}
+.container .row1 col{
+    background-color: #28328c;
+     font-size: 12;
+      margin: '20px 60px 30px';
+      align-items: center;
+      justify-content: center   ;
+}
+
+.container .row1 col table{
+   padding: 30;
+   color:  #28328c
+}
+
+.container .row1 col table td{
+    width: 4%;
+}
+*/
+.row2 {
+padding-top: 2%;
+  padding-bottom: 3%;
+  background-color: #28328c;
+  font-size: 80%;
+  text-align: center;
+}
