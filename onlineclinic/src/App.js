@@ -1,12 +1,20 @@
 
 import './App.css';
-import Layouts from './components/layouts/Layouts';
 
+import Banner from './components/pages/Banner';
+import Services from './components/pages/Services';
+import SecurityInfo from './components/pages/SecurityInfo';
+import Info from './components/pages/Info';
+import Layouts from './components/layouts/Layouts';
 function App() {
   return (
-    <div className="App">
-        <Layouts/>
-    </div>
+    <>
+     <Layouts/>
+    <Banner />
+    <Services />
+    <SecurityInfo />
+    <Info />
+    </>
   );
 }
 
