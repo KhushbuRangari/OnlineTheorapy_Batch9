@@ -24,6 +24,12 @@ html,body, #root{
   justify-content: center;
 }
 
+/* Security */
+.security {
+  background-image: url('https://images.unsplash.com/photo-1597764690472-ec054f1c8637?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');
+  background-repeat: no-repeat;
+}
+
 /* Security Info */
 .security-info {
   background-color: rgb(215, 198, 198);
