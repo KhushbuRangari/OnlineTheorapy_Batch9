@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import{Link} from 'react'
+import{Link} from 'react-router-dom'
 
 function Header() {
     return (
@@ -21,7 +21,7 @@ function Header() {
                                 <a className="nav-link active" aria-current="page" href="#">Video Consult</a>
                             </li>
                             <li className="nav-item">
-                                <Link to='medicines' className="nav-link active" aria-current="page" href="#">Medicins</Link>
+                                <Link to='medicines' className="nav-link active" aria-current="page" href="#">Medicines</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="#">Lab Tests</a>

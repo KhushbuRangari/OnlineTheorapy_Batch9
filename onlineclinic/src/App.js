@@ -1,9 +1,10 @@
 
 import './App.css';
-import Medicines from './Components/pages/Medicines/Medicines';
+import Medicines from './components/pages/Medicines/Medicines.js'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from './components/pages/HomePage';
 import FindDoctor from './components/pages/FindDoctor';
+import Header from './components/layouts/Header';
 
 
 function App() {
