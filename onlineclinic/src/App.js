@@ -1,24 +1,23 @@
 
 import './App.css';
 import Medicines from './Components/pages/Medicines/Medicines';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from './components/pages/HomePage';
+import FindDoctor from './components/pages/FindDoctor';
 
-import Banner from './components/pages/Banner';
-import Services from './components/pages/Services';
-import SecurityInfo from './components/pages/SecurityInfo';
-import Info from './components/pages/Info';
-import Layouts from './components/layouts/Layouts';
+
 function App() {
   return (
-
     <>
-     <Layouts/>
-     <Medicines />
-    <Banner />
-    <Services />
-    <SecurityInfo />
-    <Info />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<HomePage />}></Route>
+          <Route path='/finddoctor' element={<FindDoctor />}></Route>
+          <Route path='/medicines' element={<Medicines />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
-
   );
 }
 
