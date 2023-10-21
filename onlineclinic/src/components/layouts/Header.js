@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import{Link} from 'react-router-dom'
+import{Link,NavLink} from 'react-router-dom'
 
 function Header() {
     return (
@@ -15,16 +15,23 @@ function Header() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link to='/finddoctor' className="nav-link active" aria-current="page" href="#">Find Doctors</Link>
+                                <Link to='/finddoctor' className="nav-link active" aria-current="page">Find Doctors</Link>
                             </li>
                               <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Video Consult</a>
+                                <a className="nav-link active" aria-current="page">Video Consult</a>
                             </li>
                             <li className="nav-item">
-                                <Link to='medicines' className="nav-link active" aria-current="page" href="#">Medicines</Link>
+                                <Link to='medicines' className="nav-link active" aria-current="page">Medicines</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Lab Tests</a>
+                                <a className="nav-link active" aria-current="page" >Lab Tests</a>
+                            </li>
+
+                            <li className="nav-item">
+                                <NavLink to='/login' className="nav-link active" aria-current="page">Login</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to='/register' className="nav-link active" aria-current="page" >Register</NavLink>
                             </li>
                         
                       
