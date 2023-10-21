@@ -7,19 +7,24 @@ import FindDoctor from './components/pages/FindDoctor';
 import Header from './components/layouts/Header';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
+import { useState } from 'react';
 
 
 function App() {
+      const[isLogged,setisLogged]=useState(false)
   return (
     <>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path='/' element={<HomePage />}></Route>
-          <Route path='/finddoctor' element={<FindDoctor />}></Route>
+  
+          {
+            isLogged &&  <Route path='/finddoctor' element={<FindDoctor />}></Route>
+          }
           <Route path='/medicines' element={<Medicines />}></Route>
 
-          <Route path='/login' element={<Login />}></Route>
+          <Route path='/login' element={<Login  setisLogged={setisLogged}/>}></Route>
           <Route path='/register' element={<Register />}></Route>
         </Routes>
       </BrowserRouter>

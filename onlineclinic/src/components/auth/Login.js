@@ -2,9 +2,11 @@ import axios from 'axios';
 import React,{useState} from 'react';
 import URL from '../../Connection';
 
-function Login() {
+function Login({setisLogged}) {
 
     const [login,setLogin]= useState({});
+
+
     function  handleChange(e){
 
         console.log(e.target.name,e.target.value);
@@ -17,7 +19,11 @@ function Login() {
     const handleSubmit = async ()=>{
       try {
         const response = await axios.post(`${URL}/User/login/`,login)
-        console.log(response.data);
+        if(response.status==200){
+            setisLogged(true);
+        }
+        
+     
       } catch (error) {
         console.log(error);
       }
