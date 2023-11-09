@@ -1,0 +1,159 @@
+Below is an outline for API documentation for your project. I've included API paths, endpoints, and example request JSONs for different operations.
+
+---
+
+# Clinic Management API Documentation
+
+This API allows you to manage clinic staff, doctors, patients, and medicines in a clinic.
+
+## Clinic Staff
+
+### Create a New Clinic Staff Member
+
+- Endpoint: `POST /clinic-staff/api/create`
+- Example Request Body:
+  ```json
+  {
+    "username": "staff123",
+    "password": "password123",
+    "role": "front_desk",
+    "name": "John Smith",
+    "contact": "john.smith@example.com",
+    "shift": "morning",
+    "department": "reception"
+  }
+  ```
+
+### Get a List of All Clinic Staff Members
+
+- Endpoint: `GET /clinic-staff/api/all`
+
+### Get Details of a Specific Clinic Staff Member
+
+- Endpoint: `GET /clinic-staff/api/getbyId/:id`
+
+### Update Details of a Clinic Staff Member
+
+- Endpoint: `PUT /clinic-staff/api/update/:id`
+- Example Request Body:
+  ```json
+  {
+    "username": "newUsername",
+    "name": "Updated Name"
+    // Include other fields you want to update
+  }
+  ```
+
+### Delete a Clinic Staff Member
+
+- Endpoint: `DELETE /clinic-staff/api/delete/:id`
+
+## Doctors
+
+### Create a New Doctor
+
+- Endpoint: `POST /doctors/api/create`
+- Example Request Body:
+  ```json
+  {
+    "name": "Dr. John Smith",
+    "dateOfBirth": "1978-11-30",
+    "contactInfo": "john.smith@example.com",
+    "medicalHistory": "Orthopedic Surgeon with 18 years of experience",
+    "specialty": "Orthopedics",
+    "education": "M.D. in Orthopedics, University of Medical Sciences",
+    "availableHours": ["Wednesday 9 AM - 1 PM", "Friday 2 PM - 6 PM"]
+  }
+  ```
+
+### Get a List of All Doctors
+
+- Endpoint: `GET /doctors/api/all`
+
+### Get Details of a Specific Doctor
+
+- Endpoint: `GET /doctors/api/getbyId/:id`
+
+### Update Details of a Doctor
+
+- Endpoint: `PUT /doctors/api/update/:id`
+- Example Request Body:
+  ```json
+  {
+    "name": "Dr. Updated Name",
+    "specialty": "Updated Specialty"
+    // Include other fields you want to update
+  }
+  ```
+
+### Delete a Doctor
+
+- Endpoint: `DELETE /doctors/api/delete/:id`
+
+## Medicines
+
+### Populate Mock Data for Medicines
+
+- Endpoint: `POST /medicine/api/create`
+- Example Request Body:
+  ```json
+  {
+    "name": "Medicine A",
+    "chemicalComposition": "Composition A",
+    "dosage": "10mg"
+    // Include other medicine-specific fields
+  }
+  ```
+
+### Get a List of All Medicines
+
+- Endpoint: `GET /medicine/api/all`
+
+### Search for Medicines
+
+- Endpoint: `GET /medicine/api/search?search=searchQuery`
+- The search query can be a name, chemical composition, or dosage.
+
+## Patients
+
+### Create a New Patient
+
+- Endpoint: `POST /patients/api/create`
+- Example Request Body:
+  ```json
+  {
+    "username": "patient123",
+    "password": "password123",
+    "name": "Alice Johnson",
+    "dateOfBirth": "1990-05-20",
+    "contactInfo": "alice.johnson@example.com"
+  }
+  ```
+
+### Get a List of All Patients
+
+- Endpoint: `GET /patients/api/all`
+
+### Get Details of a Specific Patient
+
+- Endpoint: `GET /patients/api/getbyId/:id`
+
+### Update Details of a Patient
+
+- Endpoint: `PUT /patients/api/update/:id`
+- Example Request Body:
+  ```json
+  {
+    "username": "newUsername",
+    "name": "Updated Name"
+    // Include other fields you want to update
+  }
+  ```
+
+### Delete a Patient
+
+- Endpoint: `DELETE /patients/api/delete/:id`
+
+---
+
+You can use this outline as a basis for your API documentation. You can expand on it, include response examples, and provide any additional information that is relevant to your project.
