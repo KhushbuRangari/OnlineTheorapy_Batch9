@@ -27,6 +27,7 @@ function DoctorProfile() {
             <p>Available Hours:  {doctorData.availableHours}</p>
             <p>{`${doctorData.name} is a specialized ${doctorData.specialty} has an experience ${doctorData.medicalHistory}. `} 
             {`${doctorData.name} is a specialized ${doctorData.specialty} has an experience ${doctorData.medicalHistory}. `} </p>
+          <button className="btn btn-primary w-100">Book Appointment</button>
           </div>
    
       </div>

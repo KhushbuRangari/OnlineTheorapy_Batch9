@@ -14,6 +14,7 @@ const patientRoutes = require('./routes/patient.route');
 const doctorRoutes = require('./routes/doctor.route');
 const clinicStaffRoutes = require('./routes/clinicStaff.route');
 const medicineRoutes = require('./routes/medicine.route');
+const appointmentRoutes = require('./routes/appointment.route')
 
 
 // Use the routes
@@ -21,6 +22,7 @@ app.use('/patients', patientRoutes);
 app.use('/doctors', doctorRoutes);
 app.use('/clinic-staff', clinicStaffRoutes);
 app.use('/medicine', medicineRoutes);
+app.use('/appointment', appointmentRoutes);
 
 
 app.listen(PORT,()=>{

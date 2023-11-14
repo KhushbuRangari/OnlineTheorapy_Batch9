@@ -36,8 +36,8 @@ function Header({ isLogged,setisLogged }) {
           >
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="collapse d-flex  navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav   mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
                   to="/finddoctor"
@@ -68,13 +68,13 @@ function Header({ isLogged,setisLogged }) {
               </li>
               {isLogged.status ? (
                 <>
-                  <li className="nav-item">
+                  <li className="nav-item ms-auto" >
                   <button onClick={logout}>Logout</button>
                   </li>
                 </>
               ) : (
                 <>
-                  <li className="nav-item">
+                  <li className="nav-item ms-auto">
                     <NavLink
                       to="/login"
                       className="nav-link active"
@@ -83,7 +83,7 @@ function Header({ isLogged,setisLogged }) {
                       Login
                     </NavLink>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item ms-auto">
                     <NavLink
                       to="/register"
                       className="nav-link active"
@@ -95,17 +95,7 @@ function Header({ isLogged,setisLogged }) {
                 </>
               )}
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-info" type="submit">
-                Login/SignUp
-              </button>
-            </form>
+       
           </div>
         </div>
       </nav>

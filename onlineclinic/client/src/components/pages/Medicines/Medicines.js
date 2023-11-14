@@ -30,32 +30,47 @@ const Medicines = () => {
     getMedicines();
   }, []);
 
-  function handleSearchClick() {
-    if (searchVal === "") {
-      setMedicines(medicines);
-      return;
-    }
-    const filterBySearch = medicines.filter((item) => {
-      if (item.toLowerCase().includes(searchVal.toLowerCase())) {
-        return item;
+  const handleSearchClick = async () => {
+    try {
+      if (searchVal === "") {
+        const response = await axios.get(`${URL}/medicine/api/all`);
+        setMedicines(response.data);
+      } else {
+        const response = await axios.get(`${URL}/medicine/api/search?search=${searchVal}`);
+        setMedicines(response.data);
       }
-      return "";
-    });
-    setMedicines(filterBySearch);
-  }
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to search for medicines");
+    }
+  };
   return (
     <div>
-      <Carousel />
-      <div className="container my-3">
+      {/* <Carousel /> */}
+      <div className="container-fluid my-3">
         <div className="row">
-          <div className="col">
-            <input onChange={(e) => setSearchVal(e.target.value)}></input>
+          <div className="col w-100">
+          <input
+              type="text"
+              onChange={(e) => setSearchVal(e.target.value)}
+              placeholder="Search Medicines"
+              style={{width:"70%"}}
+            />
+         
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={handleSearchClick}
+              style={{width:"18%",marginLeft:"2%"}}
+            >
+              Search<i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
         </div>
-        <div className="row">
+        <div className="row" style={{marginTop:"5%"}}>
           <div className="col text-center d-flex flex-row flex-wrap justify-content-center ">
             {medicines.map((medicines, index) => (
-              <div key={index} className="card col-4 mb-3">
+              <div key={index} className="card col-4 mb-3 mx-3">
                 {/* <img src="..." className="card-img-top" alt="..." /> */}
                 <div className="card-body ">
                   <h2 className="card-title">{medicines.name}</h2>
